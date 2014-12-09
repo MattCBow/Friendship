@@ -10,14 +10,12 @@ public class Friends {
 		System.out.print("Please enter the name of your friendship graph file: ");
 		String file = scan.nextLine();
 		Graph g = buildGraph(file);
+		System.out.println(g);
 		System.out.println("What would you like to do?");
 		while (true) {
-			System.out
-					.println("\"chain [person] [person]\": 	find the shortest intro chain between two people");
-			System.out
-					.println("\"cliques [school]\": 		display graphs for all cliques from a certain school");
-			System.out
-					.println("\"connectors\": 			list all people who are connectors");
+			System.out.println("\"chain [person] [person]\": 	find the shortest intro chain between two people");
+			System.out.println("\"cliques [school]\": 		display graphs for all cliques from a certain school");
+			System.out.println("\"connectors\": 			list all people who are connectors");
 			System.out.println("\"quit\": 			exit the application");
 			String choice = scan.nextLine();
 			if (choice.equals("quit"))
@@ -58,7 +56,7 @@ public class Friends {
 			System.out.println();
 			System.out.println("Finding the shortest chain between " + arg1
 					+ " and " + arg2 + "...");
-			chain(arg1, arg2);
+			g.chain(arg1, arg2);
 			System.out.println();
 			break;
 		case "cliques":
@@ -67,13 +65,13 @@ public class Friends {
 				arg = arg.substring(0, arg.length() - 1);
 			System.out.println();
 			System.out.println("Finding all cliques in " + arg + "...");
-			cliques(arg);
+			g.cliques(arg);
 			System.out.println();
 			break;
 		case "connectors":
 			System.out.println();
 			System.out.println("Finding all connectors...");
-			connectors();
+			g.connectors();
 			System.out.println();
 			break;
 		}
@@ -138,23 +136,4 @@ public class Friends {
 		return p;
 	}
 
-	// finds the shortest (or one of the shortest) introduction chains between
-	// two people
-	private static void chain(String arg1, String arg2) {
-		// TODO Auto-generated method stub
-		System.out.println("chain(\"" + arg1 + "\", \"" + arg2 + "\");");
-	}
-
-	// finds all cliques of the given school and prints them in the format of
-	// this program's input
-	private static void cliques(String school) {
-		// TODO Auto-generated method stub
-		System.out.println("cliques(\"" + school + "\");");
-	}
-
-	// finds all people who are connectors and prints their names
-	private static void connectors() {
-		// TODO Auto-generated method stub
-		System.out.println("connectors();");
-	}
 }

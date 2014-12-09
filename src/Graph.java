@@ -58,4 +58,26 @@ public class Graph {
 		}
 		return s;
 	}
+	
+	// finds the shortest (or one of the shortest) introduction chains between
+		// two people
+		public void chain(String arg1, String arg2) {
+			// TODO Auto-generated method stub
+			System.out.println("chain(\"" + arg1 + "\", \"" + arg2 + "\");");
+		}
+
+		// finds all cliques of the given school and prints them in the format of
+		// this program's input
+		public void cliques(String school) {
+			// TODO Auto-generated method stub
+			System.out.println("cliques(\"" + school + "\");");
+		}
+
+		// finds all people who are connectors and prints their names
+		public void connectors() {
+			// TODO Auto-generated method stub
+			System.out.println("connectors();");
+			System.out.println();
+		}
+	
 }
