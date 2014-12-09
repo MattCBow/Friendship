@@ -88,6 +88,7 @@ public class Friends {
 		while (sc.hasNextLine()) {
 			Person[] p = buildFriendship(sc.nextLine());
 			g.addFriendship(p[0], p[1]);
+			g.addFriendship(p[1], p[0]);
 		}
 		sc.close();
 		return g;
